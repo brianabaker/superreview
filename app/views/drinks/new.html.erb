@@ -1,0 +1,12 @@
+
+
+<%= form_for @drink do |f|%>
+<%= f.label :name %>
+<%= f.text_field :name %><br/>
+<%= f.label :price %>
+<%= f.text_field :price %><br/>
+
+<%= f.collection_check_boxes :liquor_ids, @liquors, :id, :name %><br/>
+
+<%= f.submit  %>
+<% end %>
